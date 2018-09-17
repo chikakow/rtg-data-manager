@@ -1,0 +1,43 @@
+[
+  {
+    "id": "1",
+    "sku": "123",
+    "title": "Cindy Sofa",
+    "available": "1",
+    "brand": "Cindy Croford",
+    "company": "rooms to go",
+    "description": "Supor comfy",
+    "price": "3001"
+  },
+  {
+    "id": "2",
+    "sku": "456",
+    "title": "Sofia Sofa",
+    "available": "1",
+    "brand": "Sofia V",
+    "company": "rooms to go",
+    "description": "Supor comfy",
+    "price": "3222"
+  },
+  {
+    "id": "3",
+    "sku": "789",
+    "title": "Red Sofa",
+    "available": "1",
+    "brand": "Rooms to go",
+    "company": "rooms to go",
+    "description": "Supor comfy",
+    "price": "2999"
+  },
+  {
+    "id": "4",
+    "sku": "11011",
+    "title": "Blue Sofa",
+    "available": "1",
+    "brand": "Rooms to go",
+    "company": "rooms to go",
+    "description": "Supor comfy",
+    "price": "2800"
+  }
+
+]

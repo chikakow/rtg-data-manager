@@ -1,0 +1,54 @@
+<!--<app-topnav></app-topnav>-->
+<!--<app-sidebar></app-sidebar>-->
+<section class="main-container">
+
+  <h2>Products</h2>
+  <div class="conter-wrapper animate">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-header card-primary card-inverse">
+            <span class="card-title">Products Table</span>
+          </div>
+          <div class="card-block">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                <tr>
+                  <th>SKU</th>
+                  <th>Title</th>
+                  <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let product of products"  [class.selected]="product === selectedProduct">
+                  <td>{{product.sku}}</td>
+                  <td> {{product.title}}</td>
+                  <td><a [routerLink]="['prod-detail']" [queryParams]="{ id: product.sku }">link</a> <button class="btn btn-secondary" (click)="onSelect(product)" >Edit</button></td>
+                </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" *ngIf="selectedProduct">
+        <app-product-form [product]="selectedProduct"></app-product-form>
+      </div>
+    </div>
+  </div>
+
+
+  <!--
+  <ul class="products">
+    <li *ngFor="let product of products" (click)="onSelect(product)" [class.selected]="product === selectedProduct">
+      <span class="badge">{{product.id}}</span> {{product.name}}
+    </li>
+  </ul>//-->
+
+  <!--
+  <app-product-detail [product]="selectedProduct"></app-product-detail>
+  -->
+  <router-outlet></router-outlet>
+</section>

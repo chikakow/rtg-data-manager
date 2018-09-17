@@ -1,0 +1,303 @@
+#sidebar {
+	width: $nav-width;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	color: #FFF;
+	background: $brand-primary;
+	-webkit-transition: all .2s ease-in-out;
+	   -moz-transition: all .2s ease-in-out;
+	    -ms-transition: all .2s ease-in-out;
+	     -o-transition: all .2s ease-in-out;
+	        transition: all .2s ease-in-out;
+	a {
+		cursor: pointer;
+	}
+    .sidebar-header {
+        padding: 15px 5px;
+        font-size: 18px;
+        line-height: 20px;
+        height: 50px;
+        text-align: center;
+    }
+	.sidenav-outer {
+		position: absolute;
+		top:50px;
+		bottom:0;
+		left:0;
+		right: 0;
+		overflow: hidden;
+		border-top: 1px solid darken($brand-primary,5%);
+		min-height: 100%;
+    background: $color-very-dark-gray;
+	}
+	div.side-widgets {
+		margin-left: 45px;
+		color: $color-white-font;
+		float: left;
+		width: $nav-width - 45px;
+		position: absolute;
+		left: 0;
+		.widgets-header {
+			text-align: center;
+			padding: 15px;
+			height: 50px;
+			color: $color-white-font;
+			font-size: 15px;
+			font-weight: 600;
+			a {
+				color: inherit;
+				&:hover, &:focus {
+					color: $color-white-font;
+					text-decoration: none;
+				}
+			}
+		}
+		.widgets-content {
+			padding: 12px;
+			overflow: hidden;
+			.avatar-name {
+				padding-top: 12px;
+				font-size: 14px;
+			}
+			.calendar-container {
+				margin-top: 10px;
+				.fc-toolbar {
+					margin: 0 -12px 0 -12px;
+					padding: 0 12px;
+					background: darken($brand-primary, 10%);;
+					.fc-left {
+						h2 {
+							font-size: 13px!important;
+						    font-weight: 600;
+						    margin-bottom: 0!important;
+						    text-transform: uppercase;
+						    padding-top: 9px;
+						}
+					}
+					.fc-right {
+						.fc-today-button {
+							display: none;
+						}
+					}
+					.fc-button-group {
+						font-size: 15px;
+						display: flex;
+						.fc-button {
+							background: transparent;
+							box-shadow: none;
+							border: none;
+							padding: 0;
+							&:focus {
+								outline: none;
+							}
+						}
+						.fc-icon {
+							color: #FFF;
+							font-size: 10px;
+						}
+					}
+				}
+				.fc-view-container {
+					padding-top: 8px;
+					* {
+					 	border : none;
+					}
+					.fc-head {
+						border-color: transparent;
+						.fc-row {
+							border-color: transparent;
+							.fc-day-header {
+								border-color: transparent;
+								font-size: 10px;
+							}
+						}
+					}
+					.fc-body {
+						.fc-widget-content {
+							.fc-scroller {
+								overflow: hidden !important;
+								.fc-day-grid {
+									margin: 0 !important;
+								}
+							}
+						}
+						font-size: 10px;
+						.fc-content-skeleton {
+							padding-bottom: 0;
+						}
+						.fc-row {
+							min-height: 10px;
+							.fc-day-number {
+								padding-right: 6px;
+								padding-top: 2px;
+							}
+							.fc-today {
+								font-weight: 700;
+								background: darken($brand-primary,10%);
+							}
+						}
+					}
+				}
+			}
+			.news-feed {
+				.feed-header {
+					text-transform: uppercase;
+					margin-left: -12px;
+					margin-right: -12px;
+					height: 27px;
+					padding-top: 6px;
+					padding-left: 12px;
+					font-size: 10px;
+					margin-top: 10px;
+					background: darken($brand-primary, 10%);
+				}
+				.feed-content {
+					margin-top: 4px;
+					ul {
+						list-style-type: none;
+						padding: 0;
+						li {
+							height: 40px;
+							padding-top: 4px;
+							font-size: 10.5px;
+							.feed-date {
+								float: right;
+								font-size: 9px;
+								padding-right: 5px;
+								color: #eee;
+							}
+							a {
+								color: inherit;
+								&:hover, &:focus {
+									color: $color-white-font;
+									text-decoration: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	div.side-menu {
+		width: 45px;
+		background: darken($brand-primary, 10%);
+		position: absolute;
+		top: 0px;
+		bottom: 0;
+		z-index: 999;
+		float: left;
+		.menu-header {
+			height: 50px;
+			padding: 8px;
+		}
+		.menu-body {
+			width: 45px;
+			margin-top: -2px;
+			ul.sidenav {
+				list-style-type: none;
+				padding: 0;
+				li {
+					position: relative;
+					a {
+						color: $color-white-font;
+						border-radius: 0;
+						transition: all .12s linear;
+						display: inline-block;
+						text-align: center;
+						vertical-align: middle;
+						padding: 10px;
+						width: 45px;
+						height: 44px;
+						i{
+							font-size: 1rem;
+						}
+					}
+
+          &:hover {
+            background: $color-navyblue;
+          }
+
+					&.active{
+            background: $color-background-gray;
+            a {
+              color: darken($brand-primary, 5%);
+            }
+					}
+
+          &.sidemenu-header {
+            a {
+              i {
+                color: $color-skyblue;
+              }
+            }
+          }
+
+					ul.nested-dropdown {
+						list-style: none;
+						position: absolute;
+						top: -2px;
+						left: 45px;
+
+						padding-left: 0px;
+						width: 190px;
+						min-height: 40px;
+						margin-top: 2px;
+
+						li {
+							min-height: 24px;
+              background: $color-very-dark-gray;
+							a {
+								color: $color-white-font;
+								padding: 12px;
+								height: auto;
+								width: 100%;
+								display: block;
+								text-align: left;
+								font-size: 14px;
+							}
+
+              &:hover {
+                background: $color-navyblue;
+              }
+
+              &.active {
+                background: $color-background-gray;
+                a {
+                  color: darken($brand-primary, 5%);
+                }
+              }
+						}
+
+						li.sidemenu-header {
+							text-transform: uppercase;
+							min-height:45px;
+							padding-top: 10px;
+							padding-left: 12px;
+							border-bottom: 1px solid #eee;
+							font-size: 15px;
+							font-weight: bold;
+							line-height: 21px;
+							color: $color-skyblue;
+							a {
+                color: $color-skyblue;
+							}
+						}
+					}
+					&:hover{
+						ul.nested-dropdown li .router-link-active{
+							color: $brand-primary;
+							background: #FFF;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+ 	#sidebar {
+ 		left : -$nav-width;
+ 	}
+}
